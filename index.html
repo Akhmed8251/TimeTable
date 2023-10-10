@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/choices.js/10.2.0/choices.min.css" integrity="sha512-oW+fEHZatXKwZQ5Lx5td2J93WJnSFLbnALFOFqy/pTuQyffi9gsUylGGZkD3DTSv8zkoOdU7MT7I6LTDcV8GBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/datepicker.minimal.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="logo">
+                    <div class="logo__img">
+                        <img src="img/logo.svg" alt="Логотип ДГУ">
+                    </div>
+                    <div class="logo__text">
+                        Дагестанский государственный университет
+                    </div>
+                </div>         
+                <div class="action">
+                    <a id="specialVersion" href="https://finevision.ru/?hostname=oop.dgu.ru&amp;path=/sved/login.html">
+                        <svg viewBox="0 0 32 14.5" width="32pt" height="14.5pt"><path d=" M 31.854 5.795 C 31.18 2.476 28.246 -0.023 24.727 -0.023 C 22.14 -0.023 19.868 1.329 18.579 3.365 C 17.826 3.028 17 2.886 16 2.886 C 15.002 2.886 14.175 3.029 13.422 3.366 C 12.133 1.33 9.861 -0.023 7.273 -0.023 C 3.755 -0.023 0.82 2.476 0.146 5.795 Q 0 6.447 0 7.25 Q 0 8.053 0.146 8.705 C 0.82 12.024 3.754 14.523 7.273 14.523 C 11.289 14.523 14.545 11.266 14.545 7.25 C 14.545 6.859 14.514 6.475 14.455 6.101 C 14.868 5.873 15.318 5.795 16 5.795 C 16.684 5.795 17.134 5.873 17.545 6.1 C 17.486 6.474 17.455 6.858 17.455 7.25 C 17.455 11.266 20.711 14.523 24.727 14.523 C 28.246 14.523 31.18 12.024 31.854 8.705 Q 32 8.053 32 7.25 Q 32 6.447 31.854 5.795 Z  M 7.273 11.614 C 4.863 11.614 2.909 9.66 2.909 7.25 C 2.909 4.84 4.863 2.886 7.273 2.886 C 9.682 2.886 11.636 4.84 11.636 7.25 C 11.636 9.66 9.682 11.614 7.273 11.614 Z  M 24.727 11.614 C 22.318 11.614 20.364 9.66 20.364 7.25 C 20.364 4.84 22.318 2.886 24.727 2.886 C 27.137 2.886 29.091 4.84 29.091 7.25 C 29.091 9.66 27.137 11.614 24.727 11.614 Z " fill-rule="evenodd" fill="#0050cf"></path></svg>
+                    </a>
+                    <a href="/" class="action__btn"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="timetable-filter">
+                <div class="container">
+                    <h1 class="timetable-filter__title title">Заполните данные</h1>
+                    <ul class="timetable-filter__list">
+                        <li class="timetable-filter__item filter-item">
+                            <label class="filter-item__label">
+                                Факультет:
+                            </label>
+                            <select id="faculty"></select>
+                        </li>
+                        <li class="timetable-filter__item filter-item">
+                            <label class="filter-item__label">
+                                Курс:
+                            </label>
+                            <select id="course"></select>
+                        </li>
+                        <li class="timetable-filter__item filter-item">
+                            <label class="filter-item__label">
+                                Группа:
+                            </label>
+                            <select id="group"></select>
+                        </li> 
+                    </ul>
+                    <ul class="timetable-filter__list">
+                        <li class="timetable-filter__item filter-item">
+                            <div class="radio">
+                                <ul class="radio__list">
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio1" id="radio1">
+                                        <label for="radio1">
+                                            <span>Очная</span>
+                                        </label>
+                                    </li>
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio1" id="radio2">
+                                        <label for="radio2">
+                                            <span>Заочная</span>
+                                        </label>
+                                    </li>
+                                    <li class="radio__item">
+                                            <input type="radio" name="radio1" id="radio3">
+                                        <label for="radio3">
+                                            <span>Очно-заочная</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timetable-filter__item filter-item">
+                            <div class="radio">
+                                <ul class="radio__list">
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio2" id="radio4">
+                                        <label for="radio4">
+                                            <span>Бакалавр</span>
+                                        </label>
+                                    </li>
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio2" id="radio5">
+                                        <label for="radio5">
+                                            <span>Магистр</span>
+                                        </label>
+                                    </li>
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio2" id="radio6">
+                                        <label for="radio6">
+                                            <span>Специалитет</span>
+                                        </label>
+                                    </li>
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio2" id="radio7">
+                                        <label for="radio7">
+                                            <span>Аспирант</span>
+                                        </label>
+                                    </li>
+                                    <li class="radio__item">
+                                        <input type="radio" name="radio2" id="radio8">
+                                        <label for="radio8">
+                                            <span>СПО</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <ul class="timetable-filter__list">
+                        <li class="timetable-filter__item filter-item">
+                            <label class="filter-item__label">
+                                Дата:
+                            </label>
+                            <input type="date" id="datepicker" autocomplete="off">
+                        </li>
+                        <li class="timetable-filter__item filter-item">
+                            <label class="filter-item__label">
+                                Тип недели:
+                            </label>
+                            <select id="week-type"></select>
+                        </li>
+                    </ul>
+                    <button type="button" class="timetable-filter__btn">Получить расписание</button>
+                </div>
+            </section>
+            <section class="timetable">
+                <div class="timetable__container container">
+                    <h2 class="timetable__title title">Расписание 01.10.2023:</h2>
+                    <ul class="timetable__list">
+                        <li class="timetable__item item-timetable">
+                            <div class="item-timetable__time">
+                                10:15-11:50
+                            </div>
+                            <div class="item-timetable__info">
+                                <h3 class="item-timetable__title">Технологии Сети</h3>
+                                <span class="item-timetable__teacher">Раджабова Наима Шамильевна</span>
+                                <span class="item-timetable__classroom">Аудитория 3-66</span>
+                            </div>
+                        </li>
+                        <li class="timetable__item item-timetable">
+                            <div class="item-timetable__time">
+                                10:15-11:50
+                            </div>
+                            <div class="item-timetable__info">
+                                <h3 class="item-timetable__title">Технологии Сети</h3>
+                                <span class="item-timetable__teacher">Раджабова Наима Шамильевна</span>
+                                <span class="item-timetable__classroom">Аудитория 3-66</span>
+                            </div>
+                        </li>
+                        <li class="timetable__item item-timetable">
+                            <div class="item-timetable__time">
+                                10:15-11:50
+                            </div>
+                            <div class="item-timetable__info">
+                                <h3 class="item-timetable__title">Технологии Сети</h3>
+                                <span class="item-timetable__teacher">Раджабова Наима Шамильевна</span>
+                                <span class="item-timetable__classroom">Аудитория 3-66</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/10.2.0/choices.min.js" integrity="sha512-OrRY3yVhfDckdPBIjU2/VXGGDjq3GPcnILWTT39iYiuV6O3cEcAxkgCBVR49viQ99vBFeu+a6/AoFAkNHgFteg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
