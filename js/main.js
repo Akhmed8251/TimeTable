@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     getTasks()
 
-    new Datepicker('#datepicker', {
+    const datePicker = new Datepicker('#datepicker', {
         i18n: {
             months: [
                 "Январь",
@@ -96,5 +96,34 @@ document.addEventListener("DOMContentLoaded", () => {
             weekdays: ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"]
         }
     });
+
+    const btn = document.querySelector("button")
+    btn.addEventListener("click", () => {   
+        const facultyId = facChoice.getValue(true)
+        const courseId = courseChoice.getValue(true)
+        const groupId = groupChoice.getValue(true)
+        const weekType = weekTypeChoice.getValue(true)
+        const datePickerValue = datePicker.getValue()
+        const eduKindChecked = document.querySelector(".filter-item_edukind input[type=radio]:checked")
+        const degreeChecked = document.querySelector(".filter-item_degree input[type=radio]:checked")
+
+        const formatDate = (date) => date.split(".").reverse().join("-")
+
+        if (facultyId && courseId && groupId && weekType && datePickerValue && eduKindChecked && degreeChecked) {
+            const data = {
+                facultyId,
+                courseId, 
+                groupId,
+                eduKindId: eduKindChecked.dataset.id,
+                degreeId: degreeChecked.dataset.id,
+                date: new Date(formatDate(datePickerValue)),
+                weekType
+            }
+
+            //тут будет запрос на бэк (ajax jquery)
+        } else {
+            alert("Не все данные заполнены!")
+        }   
+    })
 })
 

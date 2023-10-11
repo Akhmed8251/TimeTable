@@ -177,6 +177,7 @@ body {
     width: 100%;
     max-width: 447px;
     overflow: visible;
+    margin-bottom: 4px;
 }
 
 .choices__inner {
@@ -424,6 +425,22 @@ body {
     color: #fff;
 }
 
+/* .error {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ec2222;
+    font-size: 14px;
+} */
+
+/* .error::before {
+    content: '';
+    background: url('../img/error.svg') no-repeat;
+    width: 22px;
+    height: 24px;
+    display: block;
+} */
+
 .timetable-filter__btn {
     font-weight: 500;
     font-size: 18px;
@@ -477,4 +494,28 @@ body {
     width: 20px;
     height: 20px;
     display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+    }
+
+    .logo__img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .logo__text {
+        font-size: 16px;
+    }
+
+    .timetable-filter__list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
