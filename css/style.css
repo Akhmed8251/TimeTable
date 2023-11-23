@@ -20,7 +20,9 @@
 }
 
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     padding: 0;
     margin: 0;
     border: 0;
@@ -29,19 +31,25 @@
     box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
     outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
     outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
     display: block;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     font-size: 100%;
@@ -52,30 +60,33 @@ html, body {
     -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
     font-family: inherit;
 }
 
-    input::-ms-clear {
-        display: none;
-    }
+input::-ms-clear {
+    display: none;
+}
 
 button {
     cursor: pointer;
 }
 
-    button::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-    }
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
 
-a, a:visited {
+a,
+a:visited {
     text-decoration: none;
 }
 
-    a:hover {
-        text-decoration: none;
-    }
+a:hover {
+    text-decoration: none;
+}
 
 ul li {
     list-style: none;
@@ -86,7 +97,12 @@ img {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: 400;
 }
@@ -131,17 +147,17 @@ body {
     padding: 0;
 }
 
-    .timetable-filter__list:nth-of-type(2),
-    .timetable-filter__list:nth-of-type(3) {
-        justify-content: flex-start;
-        gap: 20px 50px;
-    }
+.timetable-filter__list:nth-of-type(2),
+.timetable-filter__list:nth-of-type(3) {
+    justify-content: flex-start;
+    gap: 20px 50px;
+}
 
-        .timetable-filter__list:nth-of-type(1) .filter-item,
-        .timetable-filter__list:nth-of-type(3) .filter-item {
-            width: 100%;
-            max-width: 447px;
-        }
+.timetable-filter__list:nth-of-type(1) .filter-item,
+.timetable-filter__list:nth-of-type(3) .filter-item {
+    width: 100%;
+    max-width: 447px;
+}
 
 .filter-item__label {
     display: block;
@@ -169,34 +185,34 @@ body {
     color: #000;
 }
 
-    .popup-form__label.invalid .popup-form__input,
-    .login-form__label.invalid .login-form__input,
-    .choices__inner.invalid {
-        border-color: #dc3545;
-        border-width: 2px;
-    }
+.popup-form__label.invalid .popup-form__input,
+.login-form__label.invalid .login-form__input,
+.choices__inner.invalid {
+    border-color: #dc3545;
+    border-width: 2px;
+}
 
-    .choices__inner::after {
-        content: "";
-        background: url("../img/arrow-down.svg") no-repeat;
-        width: 21px;
-        height: 21px;
-        flex-shrink: 0;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        z-index: 10;
-        transition: 0.5s;
-        transform: rotate(0deg) translateY(-50%);
-    }
+.choices__inner::after {
+    content: "";
+    background: url("../img/arrow-down.svg") no-repeat;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    z-index: 10;
+    transition: 0.5s;
+    transform: rotate(0deg) translateY(-50%);
+}
 
 .choices.is-open .choices__inner {
     border-radius: 5px;
 }
 
-    .choices.is-open .choices__inner::after {
-        transform: translateY(-50%) rotate(-180deg);
-    }
+.choices.is-open .choices__inner::after {
+    transform: translateY(-50%) rotate(-180deg);
+}
 
 .choices__input {
     position: relative;
@@ -247,10 +263,10 @@ body {
     text-wrap: wrap;
 }
 
-    .choices__list--multiple .choices__item.is-highlighted {
-        background-color: rgb(230, 230, 230);
-        border: 1px solid #bcbcbc;
-    }
+.choices__list--multiple .choices__item.is-highlighted {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid #bcbcbc;
+}
 
 .choices[data-type*="select-one"]::after {
     content: none;
@@ -268,7 +284,8 @@ body {
     word-break: normal;
 }
 
-.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
     padding-right: 0;
 }
 
@@ -307,25 +324,25 @@ body {
     color: #000;
 }
 
-    .radio__item label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
+.radio__item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
-    .radio__item label {
-        display: inline-block;
-        border: 3px solid #fff;
-        border: 1px solid #074ab4;
-        border-radius: 4px;
-        background-color: #fff;
-        padding: 10px;
-    }
+.radio__item label {
+    display: inline-block;
+    border: 3px solid #fff;
+    border: 1px solid #074ab4;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px;
+}
 
-    .radio__item [type='radio']:checked ~ label {
-        background-color: #074ab4;
-        color: #fff;
-    }
+.radio__item [type='radio']:checked~label {
+    background-color: #074ab4;
+    color: #fff;
+}
 
 #datepicker {
     position: relative;
@@ -359,7 +376,8 @@ body {
     overflow: hidden;
 }
 
-.datepicker__prev, .datepicker__next {
+.datepicker__prev,
+.datepicker__next {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -367,23 +385,24 @@ body {
     position: relative;
 }
 
-    .datepicker__prev::before, .datepicker__next::before {
-        content: '';
-        background: url('../img/arrow-down.svg') no-repeat center;
-        background-color: #eee;
-        width: 24px;
-        height: 24px;
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(90deg);
-        z-index: 9;
-    }
+.datepicker__prev::before,
+.datepicker__next::before {
+    content: '';
+    background: url('../img/arrow-down.svg') no-repeat center;
+    background-color: #eee;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    z-index: 9;
+}
 
-    .datepicker__next::before {
-        transform: translate(-50%, -50%) rotate(-90deg);
-    }
+.datepicker__next::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
 
 .datepicker table th {
     font-size: 12px;
@@ -418,9 +437,9 @@ body {
     transition: background-color .3s;
 }
 
-    .timetable-filter__btn:hover {
-        background-color: #0848ad;
-    }
+.timetable-filter__btn:hover {
+    background-color: #0848ad;
+}
 
 .timetable__list {
     display: flex;
@@ -467,14 +486,14 @@ body {
     word-break: break-word;
 }
 
-    .item-timetable__classroom::before {
-        content: '';
-        background: url('../img/location.svg') no-repeat;
-        width: 20px;
-        height: 20px;
-        display: block;
-        flex-shrink: 0;
-    }
+.item-timetable__classroom::before {
+    content: '';
+    background: url('../img/location.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+}
 
 @media (max-width: 992px) {
     .page-content {
